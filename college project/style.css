@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+  font-family: 'DM Mono', monospace;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+.bg-blur {
+  position: fixed;
+  z-index: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('image2') center center/cover no-repeat;
+  filter: blur(14px) brightness(0.90) grayscale(0.12) contrast(1.03);
+  opacity: 0.83;
+  pointer-events: none;
+}
+.dashboard {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  margin: 2.5rem auto;
+  padding: 2.5rem 1.2rem 1.2rem 1.2rem;
+  background: rgba(255,255,255,0.88);
+  border-radius: 20px;
+  box-shadow: 0 6px 40px #0002, 0 1.5px 0 #0001;
+  border: 2px solid #111;
+  min-width: 270px;
+}
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1.3rem;
+}
+.cow-illustration {
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #000;
+  opacity: 0.7;
+  font-family: 'DM Mono', monospace;
+  margin-top: -0.5rem;
+}
+.header h1 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 2.1rem;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.subtitle {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.05rem;
+  color: #444;
+  margin-top: 0;
+  letter-spacing: 0.1em;
+}
+.clock-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.2rem;
+  margin-top: 0.8rem;
+}
+.clock {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  color: #111;
+  background: #fff;
+  border: 2.5px dashed #000;
+  border-radius: 1.1em;
+  padding: 0.45em 1.2em;
+  margin-bottom: 0.3em;
+  box-shadow: 2px 2px 0 #000, 0 2px 8px #1111;
+  transition: background 0.3s;
+}
+.date-info {
+  font-size: 1.03rem;
+  color: #222;
+  margin-bottom: 0.1em;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.05em;
+}
+.info-strips {
+  margin-top: 0.7rem;
+}
+.info-strip {
+  display: flex;
+  align-items: center;
+  font-size: 1.15rem;
+  background: #fff;
+  border-left: 7px solid #000;
+  margin-bottom: 1.05em;
+  padding: 0.6em 1em 0.6em 0.8em;
+  border-radius: 1.1em 1.3em 1.2em 0.5em;
+  box-shadow: 3px 3px 0 #000, 0 2px 7px #0002;
+  min-height: 2.1em;
+  font-family: 'DM Mono', monospace;
+  transition: background 0.2s;
+}
+.info-strip:last-child {
+  margin-bottom: 0;
+}
+.label {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.13rem;
+  margin-right: 0.5em;
+  color: #000;
+  min-width: 7.2em;
+  display: inline-block;
+}
+.value {
+  font-family: 'DM Mono', monospace;
+  font-weight: 700;
+  color: #111;
+  margin-right: 0.3em;
+}
+.weather-icon {
+  font-size: 1.2em;
+  margin-right: 0.4em;
+  display: inline-block;
+  min-width: 1.4em;
+}
+.footer-note {
+  text-align: center;
+  margin-top: 2.7rem;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.02rem;
+  color: #333;
+  letter-spacing: 0.02em;
+  opacity: 0.72;
+  padding-bottom: 0.8em;
+}
+@media (max-width: 600px) {
+  .dashboard { padding: 1.2rem 0.2rem; }
+  .header h1 { font-size: 1.38rem; }
+  .clock { font-size: 1.33rem; }
+  .info-strip { font-size: 0.97rem; }
+  .label { font-size: 0.99rem; }
+  .footer-note { font-size: 0.93rem; }
+  .cow-illustration { font-size: 0.87rem; }
+}
